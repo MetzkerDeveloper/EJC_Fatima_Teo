@@ -27,7 +27,6 @@ body{
   margin-top: 2rem;
   margin-bottom: 2rem;
   background:#000;
-
 }
 
 .menu ul{
@@ -170,15 +169,13 @@ body{
   text-decoration: none;
   color: #222;
 }
-
-.eventos
 .eventos-lista li{
   margin-top: 10px;
   margin-left: 10px;
 }
 .eventos-lista img{
   max-width: 100%;
-  height: 400px ;
+  height: 300px ;
 }
 
 /*Faq  */
