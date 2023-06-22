@@ -1,0 +1,292 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+img{
+  display: block;
+  max-width: 100%;
+}
+
+ul{
+  list-style: none;
+}
+
+body{
+  font-family: Helvetica, arial;
+  background: #f4f1f1;
+  color: #222;
+  -webkit-font-smoothing: antialiased;
+  display: grid;
+  grid-template-columns: 1fr 120px minmax(300px, 800px) 1fr;
+}
+
+.menu{
+  grid-column: 3/5;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background:#000;
+
+}
+
+.menu ul{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.menu li a{
+  display: block;
+  padding: 10px;
+  margin-right: 10px;
+  color: #222;
+  text-decoration: none;
+  text-align: center;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: .1em;
+  color: #fff;
+}
+
+
+.menu a:hover{
+  color: #ff0000e0;
+}
+
+.menu img{
+  width: 50px;
+}
+
+.grid-section{
+  grid-column: 2 /4 ;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 90px 300px 1fr;
+  grid-gap: 20px;
+  margin-bottom: 4rem;
+}
+
+/* Home */
+.descricao{
+  grid-column: 2 / 4;
+  text-align: justify;
+  
+}
+
+.descricao p{
+  margin-bottom: .9em;
+}
+
+/* Sobre */
+.titulo{
+  font-family: 'Playfair Display SC', georgia;
+  font-size: 2.5rem;
+  line-height: 1;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  grid-column: 1 / 4;
+}
+
+.coordenacao h2{
+  font-family:'IBM Plex Mono', monospace;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  margin-bottom: 1rem ;
+  color: #e54;
+}
+
+.coordenacao h2::before{
+  content: '';
+  display: inline-block;
+  width: 40px;
+  height: 10px;
+  margin-right: 10px;
+  background: #fb5;
+}
+
+.coordenacao p{
+  font-family:Helvetica, Arial;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.coordenacao-lista{
+  height: 500px;
+  overflow-y: scroll;
+  grid-column: 2;
+}
+
+.coordenacao-lista::-webkit-scrollbar{
+  width: 18px;
+}
+
+.coordenacao-lista::-webkit-scrollbar-thumb{
+  background: #fb5;
+  border-left: 4px solid #faf6ed;
+  border-right: 4px solid #faf6ed;
+}
+
+.coordenacao-lista::-webkit-scrollbar-track{
+  background: #faf6ed;
+}
+
+.depoimentos-descricao{
+  grid-column: 3;
+  text-align: justify;
+  height: 500px;
+  max-width: 100%;
+  overflow-y: scroll;
+}
+.depoimentos-descricao::-webkit-scrollbar{
+  width: 18px;
+}
+
+.depoimentos-descricao::-webkit-scrollbar-thumb{
+  background: #fb5;
+  border-left: 4px solid #faf6ed;
+  border-right: 4px solid #faf6ed;
+}
+
+.depoimentos-descricao::-webkit-scrollbar-track{
+  background: #faf6ed;
+}
+
+.depoimentos-descricao section{
+  margin-bottom: 3rem;
+}
+/* Eventos */
+
+.eventos-lista{
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  grid-column: 1/5;
+}
+.eventos-lista li{
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.eventos-lista img{
+  max-width: 100%;
+  height: 400px ;
+}
+
+/*Faq  */
+.faq-lista{
+  grid-column: 2/4;
+}
+
+.faq-lista dt{
+  font-family:'IBM Plex Mono', monospace;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: .5rem;
+  color: #e54;
+}
+
+.faq-lista dt::before{
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  margin-right: 10px;
+  background: #fb5;
+}
+
+.faq-lista dd{
+  font-family: Helvetica, Arial;
+  margin-bottom: .5rem;
+  margin-left: 30px;
+}
+
+.faq-lista a{
+  text-decoration: none;
+  color: #048e04;
+  font-weight: bold;
+}
+
+/* Contato */
+.mapa{
+  grid-column: 1;
+}
+
+
+.dados{
+  grid-column: 4;
+}
+
+.dados li{
+  margin-bottom: 1rem;
+  font-family: Helvetica, Arial;
+}
+
+.dados .fa-solid{
+ color: #fb5;
+}
+
+/* .dados li::before{
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  margin-right: 10px;
+  background: #fb5;
+} */
+
+.copy{
+  grid-column: 3/5;
+  margin-bottom: 2rem;
+  background: #fb5;
+}
+
+.copy p{
+padding: 20px;
+font-family:'IBM Plex Mono', monospace;
+font-weight: bold;
+}
+
+
+/* Resposividade */
+
+@media (max-width: 700px){
+  body{
+    grid-template-columns: 1fr;
+  }
+  .menu, .grid-section, .copy{
+    grid-column: 1;
+  }
+
+  .menu img {
+    display: none;
+  }
+  .grid-section{
+    grid-template-columns:100px 1fr;
+    grid-gap:10px;
+  }
+  .coordenacao-lista{
+    grid-column: 1;
+  }
+  .eventos-lista{
+    display: grid;
+    grid-template-columns: repeat(1,1fr)
+  }
+   
+  .faq-lista,.dados, .mapa{
+    grid-column: 1/3;
+  }
+
+  .grid-section h1{
+    font-size: 2rem;
+  }
+  .menu{
+    margin-top: 0px;
+  }
+  .copy{
+    margin-bottom: 0px ;
+  }
+}
