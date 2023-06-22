@@ -166,7 +166,12 @@ body{
   display: grid;
   grid-template-columns: 300px 300px 300px;
   grid-column: 1/5;
+} a{
+  text-decoration: none;
+  color: #222;
 }
+
+.eventos
 .eventos-lista li{
   margin-top: 10px;
   margin-left: 10px;
